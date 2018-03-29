@@ -2,7 +2,7 @@
 ===================   TASK 3   ====================
 * Name: Negative and Non-Negative Elements
 *
-* Write a script that will populate a list with as
+*Negative and Non-Negative Elements
 * many elements as user defines. For taken number
 * of elements the script should take the input from
 * user for each element. You should expect that
@@ -17,3 +17,15 @@
 """
 
 # Write your code here
+broj_elemenata_niza= int(input("Unesite broj elemenata niza: "))
+niz= []
+negativni= 0
+nenegativni= 0
+for i in range(broj_elemenata_niza):
+
+    element_niza= input("Unesite novi element: ")
+    niz.append(element_niza)
+    
+    print(niz)
+    print(negativni)
+    print(nenegativni)
