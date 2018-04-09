@@ -18,11 +18,25 @@
 
 # Write your function here
 
+#Poluprecnik kruga je P=r**2*pi
+#pi iznosi 3.14159
+
+import math
+
+def povrsina_kruga(poluprecnik):
+
+    if (not isinstance(poluprecnik, int)) and (not isinstance(poluprecnik, float)): # unijeti broj mora biti cijeli ili decimalni, pa to ispitujemo,
+                                                                                    #ako nije vraca -1
+        return -1
+
+    return (abs(poluprecnik)**2)*math.pi
 
 
 def main():
-    import math
-    r=int(input("Unesi poluprecnik kruga: "))
-    p=r*r*math.pi
-    print("Povrsina kruga iznosi ", p)
+
+    povrsina=povrsina_kruga(2.4)
+    print("Povrsina je: ", povrsina)
+
+    pass
+
 main()

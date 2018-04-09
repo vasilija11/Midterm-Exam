@@ -14,39 +14,22 @@
 
 # Write your code here
 
-def proizvod (a,b):
-    pr=a*b
-    return pr
-pr=proizvod(2,4)
-print(pr)
+broj = eval(input("Unesi cijeli broj: ")) # eval procjenjuje sta je korisnik unio
+
+if not isinstance(broj,int): # ispitujemo da li je unijeti broj cio broj
+    print("Pogresan unos!")
+    quit()
+
+product = 1
+
+for i in str(abs(broj)): # prolazi kroz cifre datog broja(ali apsolutnog, zbog minusa)
+
+    product *= int(i) # mnozi sve cifre datog broja
 
 
-# function to count number of digits
-# in the product of two numbers
-def countDigits(a, b):
-    count = 0
+if broj < 0: #ako je br negativan proizvod cifri ce mu takodje biti negativan, pa zato dobijeni proizvod mnozimo na kraju sa -1
 
-    # absolute value of the
-    # product of two numbers
-    p = abs(a * b)
+    print("Proizvod cifri datog broja iznosi: ", (-1) * product)
 
-    # if product is 0
-    if (p == 0):
-        return 1
-
-    # count number of digits
-    # in the product 'p'
-    while (p > 0):
-        count = count + 1
-        p = p // 10
-
-    # required count of digits
-    return count
-
-
-a = 33
-b = -24
-print("Number of digits = ",
-      countDigits(a, b))
-
-
+else:
+    print("Proizvod cifri datog broja iznosi: ", product)
